@@ -71,8 +71,6 @@ exports.getMe = (req, res, next) => {
 	next();
 };
 exports.updateMe = catchAsync(async (req, res, next) => {
-	console.log('This is req.file:', req.file);
-	console.log('This is req.body:', req.body);
 	// STEP 00: Perform Sanitization
 	// const { email, password } = req.body;	// This method is not scalable
 	const filteredBody = filterObj(

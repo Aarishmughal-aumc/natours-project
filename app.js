@@ -8,6 +8,7 @@ const helmet = require('helmet');
 const mongoSanitize = require('express-mongo-sanitize');
 const xss = require('xss-clean');
 const hpp = require('hpp');
+const compression = require('compression');
 
 const AppError = require('./utils/appError');
 const globalErrorHandler = require('./controllers/errorController');
@@ -75,6 +76,8 @@ app.use(
 
 // Serving Static Files
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(compression());
 
 // Test Middleware
 app.use((req, res, next) => {

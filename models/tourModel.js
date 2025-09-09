@@ -193,13 +193,13 @@ tourSchema.pre(/^find/, function (next) {
 	}); // Populate 'guides' field with user data
 	next();
 });
-tourSchema.post(/^find/, function (docs, next) {
-	// timeTaken = Date.now() - timeTaken;
-	console.log(
-		`Process took ${Date.now() - this.start}ms.`,
-	);
-	next();
-});
+// tourSchema.post(/^find/, function (docs, next) {
+// 	// timeTaken = Date.now() - timeTaken;
+// 	console.log(
+// 		`Process took ${Date.now() - this.start}ms.`,
+// 	);
+// 	next();
+// });
 
 // NOT GOOD PRACTICE
 // tourSchema.pre('findOne', function (next) {

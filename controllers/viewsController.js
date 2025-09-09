@@ -93,7 +93,6 @@ exports.getAccount = catchAsync(async (req, res, next) => {
 	// 	process.env.JWT_SECRET,
 	// );
 	// const currentUser = await User.findById(decoded.id);
-	console.log(res.locals.user);
 	res.status(200).render('account', {
 		title: 'Your Account',
 	});

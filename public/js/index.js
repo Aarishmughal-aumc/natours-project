@@ -49,7 +49,6 @@ if (userDataForm)
 			'photo',
 			document.getElementById('photo').files[0],
 		);
-		console.log(formData);
 		await updateSettings(formData, 'data');
 	});
 if (userSettingsForm)
@@ -68,9 +67,6 @@ if (userSettingsForm)
 			const passwordConfirm = document.getElementById(
 				'password-confirm',
 			).value;
-			console.log(
-				`${passwordCurrent} ${password} ${passwordConfirm}`,
-			);
 			await updateSettings(
 				{
 					passwordCurrent,
